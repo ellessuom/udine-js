@@ -1,0 +1,30 @@
+{
+  "name": "udine-js",
+  "version": "1.0.0",
+  "description": "Blog for the Udine JS community (Italy)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellessuom/udine-js.git"
+  },
+  "author": "Agustin Demousselle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ellessuom/udine-js/issues"
+  },
+  "homepage": "https://github.com/ellessuom/udine-js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.1",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}
