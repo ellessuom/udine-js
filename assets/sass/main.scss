@@ -1,2 +1,7 @@
-// Required
-@import "node_modules/bootstrap/scss/bootstrap";
+// Resources
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Components
+@import '_variables.scss';
+@import '_fonts.scss';
+@import '_cover.scss';
