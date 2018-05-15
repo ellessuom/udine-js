@@ -16,45 +16,86 @@
         .title {
             text-align: center;
             h1,p {
-                font-family: 'Open Sans';
-                font-weight: 100;
-                // color: $font-color-dark;
-                color: white;
+                font-family: $font-family-main, sans-serif;
+                font-weight: $font-weight-thin;
+                color: $font-color-light;
             }
         }
+
     }
     
-    .cover-menu {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        // width: 100%;
+    // .cover-menu {
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     align-items: center;
 
-        .menu {
-            list-style-type: none;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: bold;
-        }
-    }
+    //     .menu {
+    //         list-style-type: none;
+    //         text-transform: uppercase;
+    //         font-size: 12px;
+    //         font-weight: bold;
+    //     }
+    // }
 
     .discover-btn {
         margin: 20px 0;
         background-color: transparent;
         padding: 5px 20px;
-        color: white;
-        border: 2px solid white;
+        color: $font-color-light;
+        border: 2px solid $font-color-light;
         transition: .2s;
         &:hover {
             transform: scale(1.03);
         }
     }
-}
 
+    .socials {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin-top: 5%;
+        li {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 0;
+            color: $font-color-light;
+            margin-bottom: 20px;
+            border-radius: $border-radius-hard;
+            cursor: pointer;
+            transition: .2s;
+            .social-logo {
+                padding: 10px 15px;
+                border-top-left-radius: $border-radius-hard;
+                border-bottom-left-radius: $border-radius-hard;
+                // border-right: 1px solid #414141;
+            }
+            .social-name {
+                padding: 10px;
+            }
+        }
 
-
-@keyframes grad {
-	0% { background-position: 0% 50% }
-	50% { background-position: 100% 50%	}
-	100% { background-position: 0% 50% }
+        #facebook {
+            border-color: $facebook-color;
+            color: $font-color-light;
+            background-color: $facebook-color;
+            .social-logo {
+                background-color: $facebook-color + 20;
+            }
+            &:hover {
+                box-shadow: 0px 1px 2px $facebook-color - 10;
+            }
+        }
+        #github {
+            border-color: $github-color;
+            color: $font-color-light;
+            background-color: $github-color;
+            .social-logo {
+                background-color: $github-color + 20;
+            }
+            &:hover {
+                box-shadow: 0px 1px 2px $github-color - 10;
+            }
+        }
+    }
 }
