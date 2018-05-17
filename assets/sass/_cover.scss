@@ -1,101 +1,45 @@
 .cover {
-    display: flex;
-
+    position: relative;
     .cover-header {
         display: flex;
-        // width: 720px;
         width: 100vw;
         height: 100vh;
         justify-content: center;
         align-items: center;
     
-        flex-direction: column;
-        background: linear-gradient(-45deg, $cover-bg-one, $cover-bg-two);
-        background-size: 400% 400%;
-        animation: grad 20s ease infinite;
+        flex-direction: row;
+        background-color: #212121;
+        color: yellow;
+        font-weight: bold;
+        // background: linear-gradient(-45deg, $cover-bg-one, $cover-bg-two);
+        // background-size: 400% 400%;
+        // animation: grad 20s ease infinite;
         .title {
-            text-align: center;
-            h1,p {
-                font-family: $font-family-main, sans-serif;
-                font-weight: $font-weight-thin;
+            padding: 0 25px;
+            font-family: $font-family-main, sans-serif;
+            h1 {
+                text-transform: lowercase;
+                font-size: 42px;
+                // font-weight: $font-weight-thin;
+            }
+            p {
                 color: $font-color-light;
             }
         }
-
+        #logo {
+            font-size: 12rem;
+        }
     }
     
-    // .cover-menu {
-    //     display: flex;
-    //     justify-content: flex-start;
-    //     align-items: center;
-
-    //     .menu {
-    //         list-style-type: none;
-    //         text-transform: uppercase;
-    //         font-size: 12px;
-    //         font-weight: bold;
-    //     }
-    // }
-
-    .discover-btn {
-        margin: 20px 0;
-        background-color: transparent;
-        padding: 5px 20px;
-        color: $font-color-light;
-        border: 2px solid $font-color-light;
-        transition: .2s;
-        &:hover {
-            transform: scale(1.03);
-        }
-    }
-
-    .socials {
-        list-style-type: none;
-        padding: 0;
+    .down-icon {
+        font-size: 2rem;
+        width: 100%;
         text-align: center;
-        margin-top: 5%;
-        li {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            padding: 0;
-            color: $font-color-light;
-            margin-bottom: 20px;
-            border-radius: $border-radius-hard;
-            cursor: pointer;
-            transition: .2s;
-            .social-logo {
-                padding: 10px 15px;
-                border-top-left-radius: $border-radius-hard;
-                border-bottom-left-radius: $border-radius-hard;
-                // border-right: 1px solid #414141;
-            }
-            .social-name {
-                padding: 10px;
-            }
-        }
-
-        #facebook {
-            border-color: $facebook-color;
-            color: $font-color-light;
-            background-color: $facebook-color;
-            .social-logo {
-                background-color: $facebook-color + 20;
-            }
-            &:hover {
-                box-shadow: 0px 1px 2px $facebook-color - 10;
-            }
-        }
-        #github {
-            border-color: $github-color;
-            color: $font-color-light;
-            background-color: $github-color;
-            .social-logo {
-                background-color: $github-color + 20;
-            }
-            &:hover {
-                box-shadow: 0px 1px 2px $github-color - 10;
-            }
-        }
+        color: white;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        margin: auto;
+        animation: bounce 2s infinite;
     }
 }
