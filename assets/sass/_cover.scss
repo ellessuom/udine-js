@@ -11,16 +11,12 @@
         background-color: $gray;
         color: $yellow;
         font-weight: bold;
-        // background: linear-gradient(-45deg, $cover-bg-one, $cover-bg-two);
-        // background-size: 400% 400%;
-        // animation: grad 20s ease infinite;
         .title {
             padding: 0 25px;
             font-family: $font-family-main, sans-serif;
             h1 {
                 text-transform: lowercase;
                 font-size: 42px;
-                // font-weight: $font-weight-thin;
             }
             p {
                 color: $font-color-light;
@@ -38,7 +34,7 @@
         color: white;
         position: absolute;
         bottom: 0;
-        display: block;
+        display: none;
         margin: auto;
         animation: bounce 2s infinite;
     }
