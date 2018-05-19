@@ -1,25 +1,29 @@
-let text = 'udine js';
-
-let len = 0;
-var writeSlogan = function () {
-    $('#cover-title').html(text.substr(0, len++));
+var len = 0;
+var write = function (target, text, cb) {
+    target.html(text.substr(0, len++));
     if (len < text.length + 1) {
-      let time = Math.ceil(Math.random()*200)+10
-      setTimeout('writeSlogan()', time);
+      var time = Math.ceil( Math.random()*200 ) + 10;
+      setTimeout(function () { write(target, text, cb); }, time);
     } else {
-      len = 0;
-      text = '';
+      cb();
     }
-  }
-
-var init = function () {
-    setTimeout(writeSlogan, 1000);
 };
 
-// document.addEventListener("DOMContentLoaded", function(event) { 
-//     init();
-// });
+
+var writeSlogan = function () {
+    write($('#cover-title'), 'udine js', function () {
+        setTimeout(function () {
+            $('#down-icon').fadeIn();
+        }, 500);
+    });
+};
+
+var init = function () {
+    setTimeout(function() {
+        writeSlogan();
+    }, 750);
+};
 
 window.onload = (function (){
-    init()
+    init();
 });
