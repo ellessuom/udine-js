@@ -1,13 +1,21 @@
+@include media-breakpoint-up(sm) {
+    .cover-header {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row !important;
+        text-align: left !important;
+        // @TODO: fix both "!important"
+    }
+}
 .cover {
-    position: relative;
     .cover-header {
         display: flex;
         width: 100vw;
         height: 100vh;
         justify-content: center;
         align-items: center;
-    
-        flex-direction: row;
+        flex-direction: column;
+        text-align: center;
         background-color: $gray;
         color: $yellow;
         font-weight: bold;
@@ -23,12 +31,12 @@
             }
         }
         #logo {
-            font-size: 12rem;
+            font-size: $logo-size;
         }
     }
     
     .down-icon {
-        font-size: 2rem;
+        font-size: 1.5rem;
         width: 100%;
         text-align: center;
         color: white;
@@ -36,10 +44,41 @@
         bottom: 0;
         display: none;
         margin: auto;
+        margin-bottom: 10px;
         animation: bounce 2s infinite;
     }
 }
 
 .blinker {
     animation: blinker 750ms ease-in-out infinite;
+}
+
+.section {
+    background-color: $gray - 20;
+    color: $font-color-light;
+    padding: 15px 25px;
+}
+
+.socials {
+    color: $gray + 20;
+    transition: 500ms;
+    .fab {
+        font-size: 3rem;
+    }
+    .social-name {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+    .social {
+        // border-radius: $border-radius-hard;
+        padding: 10px 25px;
+        cursor: pointer;
+        border-bottom: 2px solid $gray - 20;
+        &:hover {
+            // color: $gray - 20;
+            // background-color: $gray + 20;
+            border-bottom: 2px solid $gray + 20;
+        }
+    }
 }
