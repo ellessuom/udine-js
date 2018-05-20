@@ -1,0 +1,26 @@
+.socials {
+    color: $gray + 20;
+    background-color: $gray - 20;
+    .fab {
+        font-size: 2rem;
+    }
+    .social-name {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
+    .social {
+        // border-radius: $border-radius-hard;
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 2px solid $gray - 20;
+        transition: 300ms ease-in-out;
+        // transition: $transition-time;
+        &:hover {
+            color: $gray + 40;
+            // background-color: $gray + 20;
+            // border-bottom: 2px solid $gray + 20;
+            transform: translateY(-2px);
+        }
+    }
+}

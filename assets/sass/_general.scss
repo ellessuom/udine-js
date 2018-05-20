@@ -1,0 +1,14 @@
+.blinker {
+    animation: blinker 750ms ease-in-out infinite;
+}
+
+.section {
+    background-color: $white;
+    padding: 15px 25px;
+}
+
+.section-dark {
+    @extend .section;
+    color: $font-color-light;
+    background-color: $gray;
+}
