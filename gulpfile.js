@@ -4,9 +4,9 @@ const gulp = require('gulp'),
     jshint = require('gulp-jshint');
 
 gulp.task('sass', function () {
-    return gulp.src('./assets/sass/**/*.scss')
+    return gulp.src('./src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist'))
         .pipe(connect.reload());
 });
 
@@ -24,15 +24,15 @@ gulp.task('html', function () {
 
 // configure the jshint task
 gulp.task('jshint', function () {
-    return gulp.src('assets/js/*.js')
+    return gulp.src('./src/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function () {
-    gulp.watch('./assets/js/*.js', ['jshint']);
-    gulp.watch('./assets/sass/**/*.scss', ['sass']);
+    gulp.watch('./src/**/*.js', ['jshint']);
+    gulp.watch('./src/**/*.scss', ['sass']);
     gulp.watch('./*.html', ['html']);
 });
 

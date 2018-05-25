@@ -6328,7 +6328,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 15px 25px; }
 
 .section-dark {
-  color: white;
+  color: #d1d1d1;
   background-color: #323330; }
 
 @media (min-width: 576px) {
@@ -6358,7 +6358,7 @@ a.text-dark:hover, a.text-dark:focus {
       text-transform: lowercase;
       font-size: 42px; }
     .cover .cover-header .title p {
-      color: white; }
+      color: #d1d1d1; }
   .cover .cover-header #logo {
     font-size: 12rem; }
 
