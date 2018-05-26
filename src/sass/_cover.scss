@@ -1,32 +1,32 @@
 @include media-breakpoint-up(sm) {
     .cover-header {
         justify-content: center;
-        align-items: center;
-        flex-direction: row !important;
-        text-align: left !important;
+        align-items    : center;
+        flex-direction : row !important;
+        text-align     : left !important;
         // @TODO: fix both "!important"
     }
 }
 .cover {
     .cover-header {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
+        display         : flex;
+        width           : 100vw;
+        height          : 100vh;
+        justify-content : center;
+        align-items     : center;
+        flex-direction  : column;
+        text-align      : center;
         background-color: $gray;
-        color: $yellow;
-        font-weight: bold;
+        color           : $yellow;
+        font-weight     : bold;
         .title {
-            padding: 0 25px;
+            padding    : 0 25px;
             font-family: $font-family-main, sans-serif;
             font-weight: $font-weight-thin;
             h1 {
-                font-weight: $font-weight-thin;
+                font-weight   : $font-weight-thin;
                 text-transform: lowercase;
-                font-size: 42px;
+                font-size     : 42px;
             }
             p {
                 color: $font-color-light;
@@ -34,19 +34,24 @@
         }
         #logo {
             font-size: $logo-size;
+            animation: slide-up 750ms ease-in-out;
+
+            .fab {
+                text-shadow: 0px 0px 10px black;
+            }
         }
     }
     
     .down-icon {
-        font-size: 1.5rem;
-        width: 100%;
-        text-align: center;
-        color: $white;
-        position: absolute;
-        bottom: 0;
-        display: none;
-        margin: auto;
+        font-size    : 1.5rem;
+        width        : 100%;
+        text-align   : center;
+        color        : $white;
+        position     : absolute;
+        bottom       : 0;
+        display      : none;
+        margin       : auto;
         margin-bottom: 10px;
-        animation: bounce 2s infinite;
+        animation    : bounce 2s infinite;
     }
 }
