@@ -1,6 +1,6 @@
-const $ = require("jquery");
+const $  = require('jquery');
 
-let len = 0;
+let   len   = 0;
 const write = (target, text, cb) => {
     target.html(text.substr(0, len++));
     if (len < text.length + 1) {

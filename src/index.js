@@ -1,10 +1,10 @@
-import $ from 'jquery';
-import { titles } from './scripts/writer';
-import socials from "./data/socials";
+const $  = require('jquery');
+const writer  = require('./scripts/writer');
+const socials = require('./data/socials');
 
 const init = () => {
     setTimeout(function() {
-        titles();
+        writer.titles();
     }, 500);
 
     $(window).scroll(function(){
@@ -22,7 +22,7 @@ const addSocialsListeners = () => {
     });
 };
 
-window.onload = (function (){
+window.onload = (() => {
     init();
     addSocialsListeners();
 });
