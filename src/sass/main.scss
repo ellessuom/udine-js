@@ -14,7 +14,11 @@
 a {
     color: $yellow;
     &:hover {
-        color: $yellow + 20;
+        color          : $yellow + 20;
         text-decoration: none;
     }
+}
+
+#seo {
+    display: none;
 }
