@@ -1,6 +1,5 @@
 // Resources
 @import 'node_modules/bootstrap/scss/bootstrap';
-// @import 'node_modules/font-awesome/scss/font-awesome.scss';
 // Components
 @import '_variables.scss';
 @import '_fonts.scss';
@@ -9,6 +8,7 @@
 @import '_general.scss';
 @import '_cover.scss';
 @import '_socials.scss';
+@import '_news.scss';
 @import '_footer.scss';
 
 a {
@@ -22,3 +22,9 @@ a {
 #seo {
     display: none;
 }
+
+.ico {
+    .square {
+     fill: $gray;
+   }
+ }
