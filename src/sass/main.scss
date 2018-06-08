@@ -11,6 +11,10 @@
 @import '_news.scss';
 @import '_footer.scss';
 
+body {
+    background-color: $gray;
+}
+
 a {
     color: $yellow;
     &:hover {
