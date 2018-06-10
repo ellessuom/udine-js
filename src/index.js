@@ -38,6 +38,14 @@ const runLogoAnimation = () => {
     });
 };
 
+const addSocialsListeners = () => {
+    $('#socials-container').children().each((i, element) => {
+        element.addEventListener('click', () => {
+            window.open(socials[element.id].url, '_blank');
+        }, false)
+    });
+};
+
 const init = () => {
     runLogoAnimation();
 
@@ -51,14 +59,6 @@ const init = () => {
                 'transform': 'translateY(0px)'
             });
         }
-    });
-};
-
-const addSocialsListeners = () => {
-    $('#socials-container').children().each((i, element) => {
-        element.addEventListener('click', () => {
-            window.open(socials[element.id].url, '_blank');
-        }, false)
     });
 };
 
